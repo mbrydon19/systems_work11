@@ -9,6 +9,10 @@ int main(){
   struct stat info;
   stat( "file.txt", &info);
   printf( "file size: %lld\n", info.st_size);
+  char size[10];
+  int n,sizee = info.st_size;
+  n= sprintf(size, "%dB", sizee);
+  printf("file size in human readable form: %s\n", size);
   printf( "permissions: %o\n", info.st_mode);
   printf( "time of last access: %s\n", ctime(&info.st_atime));
 }
