@@ -8,7 +8,7 @@
 int main(){
   struct stat info;
   stat( "file.txt", &info);
-  printf( "file size: %lld\n", info.st_size);
+  printf( "file size: %ld\n", info.st_size);
   char size[10];
   int n,sizee = info.st_size;
   n= sprintf(size, "%dB", sizee);
